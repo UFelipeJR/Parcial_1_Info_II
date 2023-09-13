@@ -1,1 +1,0 @@
-# Informe Informática II #
