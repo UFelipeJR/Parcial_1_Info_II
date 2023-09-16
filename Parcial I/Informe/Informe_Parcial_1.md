@@ -6,7 +6,7 @@ Nos hemos documentado acerca del funcionamiento del 74hc595, y hemos notado que 
 cantidad de 74hc595 que usemos la cantidad de pines necesarios sigue siendo constante. Esto nos lleva a la primera propuesta de la solución, utilizar 8 integrados.
 
 
-## Nota
+### Nota
 
 Para iniciar con el proceso de construcción de la solución, primero tuvimos que familiarizarnos con el funcionamiento a nivel de hardware, y software; por lo que tuvimos que hacer un entorno de pruebas para comprender cómo se programa y qué podiamos plantear. En pocas palabras en esta etapa estudiamos Arduino y nos documentamos acerca de todo lo necesario para plantear correctamente la solución.
 
@@ -24,3 +24,41 @@ void loop(){
 }
 
 ```
+## Aplicación e Interpretación del código para el 74hc595
+
+Para darnos una dirección en como empezar, primero analizamos el comportamiento de nuestro microcontrolador con respecto a su código, indagamos para encontrar la aplicación y modo de controlar este mismo, la manera de hacer el setup y como hacer que el procesamiento de información para este fuera eficaz y legible a lo largo de nuestro ensamblado.
+
+
+![ensamblado](https://i.imgur.com/0f7lWXr.png)
+
+
+```c++
+
+//Como se plantea el definir nuestras variables y como hacerlas funcionar acorde a nuestro mc
+
+int pinData  = 2; //Declarado acorde a nuestro ensamble (que en el caso del modelo de TK
+int pinLatch = 3;
+int pinClock = 4;
+
+void ledWrite(int FLed){     //Nuestro declare para el estado del LED
+   shiftOut(pinData, pinClock, LSBFIRST, FLed);
+   digitalWrite(pinLatch, HIGH);
+   digitalWrite(pinLatch, LOW);
+}
+
+void setup(){
+   pinMode(pinData, OUTPUT); //Declaramos como outputs (salidas) para que se registren durante la ejecución del loop
+   pinMode(pinLatch, OUTPUT);
+   pinMode(pinClock, OUTPUT);
+}
+
+void loop(){
+   ledWrite(128); delay(TIEMPO); //Se prende fisicamente el LED
+}
+
+```
+
+Tambien denotamos como se comporta el valor de FLed en nuestros LEDs, de modo que acorde a los bytes ingresados será el modo de que sea encendido estos, en el ensamblaje tenemos 3 disponibles de los cuales se prendian en la sumatoria de los bytes, o por valor de byte sera el LED que estara prendido, asumimos que este comportamiento estaba basado sea o por el reloj o por el data que se envia.
+
+
+
