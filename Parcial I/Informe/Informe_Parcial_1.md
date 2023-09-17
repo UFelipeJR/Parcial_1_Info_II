@@ -87,3 +87,19 @@ También cabe decir que será necesario usar la función shiftout para enviar lo
 ## Propuesta Inicial
 
 No será una tarea complicada usar una matriz dinamica para generar los bytes y después liberar la memoria reservada, en base a ella podemos generar las secuencias con ciclos y no hacer uso de una solución trivial.
+
+A modo de nuestro workflow trabajamos con un arreglo dinamico el cual fuera modificable para tener un pequeño acercamiento a como se dirige el proposito de nuestra practica.
+
+del mismo modo se vería graficamente como...
+
+```python
+...
+(0,0,0,1) //4x4 de leds.
+(0,0,1,0)
+(0,1,0,0)
+(1,0,0,0)
+...
+
+```
+Este seria para la representación de como se veria para nuestras filas si tuvieramos de basis solo el 0 para apagado el 1 para encendido, un poco contradictorio a la primera idea que tuvimos que era hacerlo mediante el uso de bytes pero todo esto tendra más sentido al momento de tener la idea concretada con todo funcionando al unisono.
+
