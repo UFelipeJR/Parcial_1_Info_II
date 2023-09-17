@@ -82,3 +82,8 @@ Si se usa 128 se enciende el más significativo.
 Si se usa 1 se enciende el menos significativo.
 
 También cabe decir que será necesario usar la función shiftout para enviar los datos seriados bit a bit.
+
+
+## Propuesta Inicial
+
+No será una tarea complicada usar una matriz dinamica para generar los bytes y después liberar la memoria reservada, en base a ella podemos generar las secuencias con ciclos y no hacer uso de una solución trivial.
