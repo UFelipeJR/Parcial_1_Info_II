@@ -61,4 +61,24 @@ void loop(){
 Tambien denotamos como se comporta el valor de FLed en nuestros LEDs, de modo que acorde a los bytes ingresados será el modo de que sea encendido estos, en el ensamblaje tenemos 3 disponibles de los cuales se prendian en la sumatoria de los bytes, o por valor de byte sera el LED que estara prendido, asumimos que este comportamiento estaba basado sea o por el reloj o por el data que se envia.
 
 
+## Manejo de encendido de leds
 
+A cada 74hc595 se le puede asignar un valor binario que podemos considerar un byte, dependiendo de la combinación de bits, se encenderán determinados leds, supongamos que tenemos la siguiente fila de led.
+
+Si usamos el el byte 00000001 se encenderá el último led únicamente:
+Si usamos el byte 1111111 se encenderán todos los leds.
+
+Por otra parte el integrado 74hc595 puede programarse en dos modos LSB (Least Significant Bit) o MSB (Most Significant Bit).
+
+En modo LSB: EL primer bit que se transmite es el último es decir el menos significativo.
+En modo MSB: EL primer bit que se transmite es el primero es decir el más significativo.
+
+Por otra parte también podemos indicar que leds encendemos con el valor entero del byte apropiado.
+
+Ejemplo:
+
+Si se usa 255 se encienden todos.
+Si se usa 128 se enciende el más significativo.
+Si se usa 1 se enciende el menos significativo.
+
+También cabe decir que será necesario usar la función shiftout para enviar los datos seriados bit a bit.
