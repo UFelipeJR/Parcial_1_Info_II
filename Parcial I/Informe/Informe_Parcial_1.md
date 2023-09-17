@@ -103,3 +103,9 @@ del mismo modo se vería graficamente como...
 ```
 Este seria para la representación de como se veria para nuestras filas si tuvieramos de basis solo el 0 para apagado el 1 para encendido, un poco contradictorio a la primera idea que tuvimos que era hacerlo mediante el uso de bytes pero todo esto tendra más sentido al momento de tener la idea concretada con todo funcionando al unisono.
 
+## Propuesta de tareas para implementar impresión de patrones
+
+* Hacer montaje en tinkercad
+* Implementar en software una matriz en la que se van a generar los patrones o figuras para después reflejarlas en los leds.
+* Crear una función que "traduzca" las filas de la matriz a bytes.
+* Crear una funcionalidad que permita encender los leds en base a la matriz, ya que los leds pueden ser encendidos con numeros enteros correspondientes al valor decimal de cada byte. 
