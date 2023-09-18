@@ -73,15 +73,17 @@ Por otra parte el integrado 74hc595 puede programarse en dos modos LSB (Least Si
 En modo LSB: EL primer bit que se transmite es el último es decir el menos significativo.
 En modo MSB: EL primer bit que se transmite es el primero es decir el más significativo.
 
-Por otra parte también podemos indicar que leds encendemos con el valor entero del byte apropiado.
+Por otra parte también podemos indicar que leds encendemos con el valor entero del byte apropiado, gracias a su comportamiento con las operaciones genericas de la suma y como se comporta de manera jerarquica los bits.
 
 Ejemplo:
 
-Si se usa 255 se encienden todos.
-Si se usa 128 se enciende el más significativo.
-Si se usa 1 se enciende el menos significativo.
+Si se usa 255 se encienden todos los de la fila.                //
+Si se usa 128 se enciende el más significativo de la fila.      //
+Si se usa 1 se enciende el menos significativo de la fila.      //
 
-También cabe decir que será necesario usar la función shiftout para enviar los datos seriados bit a bit.
+Cabe aclarar que esto sera con una fila que tenga el alcance suficiente para llegar a 1 (que a veces no funcionaba en arregols más pequeños como de 3 leds).
+
+Para esto será necesario usar la función shiftout para enviar los datos seriados bit a bit.
 
 
 ## Propuesta Inicial
@@ -101,7 +103,7 @@ del mismo modo se vería graficamente como...
 ...
 
 ```
-Este seria para la representación de como se veria para nuestras filas si tuvieramos de basis solo el 0 para apagado el 1 para encendido, un poco contradictorio a la primera idea que tuvimos que era hacerlo mediante el uso de bytes pero todo esto tendra más sentido al momento de tener la idea concretada con todo funcionando al unisono.
+Este seria para la representación de como se veria para nuestras filas si tuvieramos de basis solo el 0 para apagado el 1 para encendido, como basis para el momento de que tengamos la idea concretada con todo funcionando al unisono.
 
 ## Propuesta de tareas para implementar impresión de patrones
 
