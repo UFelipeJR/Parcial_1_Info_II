@@ -140,12 +140,14 @@ traduccionByte();
 
 
 */
-verificacion() pedirá al usuario el tiempo que pasará entre encendido y apagado y la cantidad de repeticiones, para luego reflejar esto en los leds.
+verificacion() pedirá al usuario el tiempo que pasará entre encendido y apagado y la cantidad de repeticiones, para luego
+reflejar esto en los leds.
 /*
 
 
 /*
-imagen() pedirá al usuario la posición de una fila y una columna para invertir el valor que esta posición tiene asignanado, de esta manera si contamos con una matriz 4x4 con todos sus leds apagados y el usuario ingresa [1][1]. 
+imagen() pedirá al usuario la posición de una fila y una columna para invertir el valor que esta posición tiene asignanado,
+de esta manera si contamos con una matriz 4x4 con todos sus leds apagados y el usuario ingresa [1][1]. 
 */
 
 ...
@@ -182,4 +184,5 @@ En decimal: 128
 
 ```
 
-Nota: Como la matriz no se necesita durante todo el tiempo de ejecución y la memoria del Arduino es muy pequeña probablemente se usará un arreglo dinámico.
+Nota: Como la matriz no se necesita durante todo el tiempo de ejecución y la memoria del Arduino es muy pequeña
+probablemente se usará un arreglo dinámico.
