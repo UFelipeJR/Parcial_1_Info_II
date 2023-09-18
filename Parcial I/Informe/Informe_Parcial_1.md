@@ -85,9 +85,7 @@ Cabe aclarar que esto sera con una fila que tenga el alcance suficiente para lle
 
 Para esto será necesario usar la función shiftout para enviar los datos seriados bit a bit.
 
-Demonstración:
-
-[Prueba](https://imgur.com/a/hb3Cpd1)
+[- Demo -](https://imgur.com/a/hb3Cpd1)
 
 ## Propuesta Inicial
 
