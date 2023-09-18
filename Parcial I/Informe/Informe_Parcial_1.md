@@ -109,3 +109,12 @@ Este seria para la representación de como se veria para nuestras filas si tuvie
 * Implementar en software una matriz en la que se van a generar los patrones o figuras para después reflejarlas en los leds.
 * Crear una función que "traduzca" las filas de la matriz a bytes.
 * Crear una funcionalidad que permita encender los leds en base a la matriz, ya que los leds pueden ser encendidos con numeros enteros correspondientes al valor decimal de cada byte. 
+* Trabajar en la interacción usuario - simulación
+* Generación de patrones automáticos
+* Implementación de menú
+* Optimizar recursos usando memoria dinámica y tener en cuenta el uso de punteros,
+
+En esta lista se descibre brevemente el paso a paso inicial que hemos planteado para comenzar con la 
+implementación.
+
+## Resumen de planteamiento para la solución
