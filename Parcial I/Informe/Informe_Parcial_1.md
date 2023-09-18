@@ -111,10 +111,71 @@ Este seria para la representación de como se veria para nuestras filas si tuvie
 * Crear una funcionalidad que permita encender los leds en base a la matriz, ya que los leds pueden ser encendidos con numeros enteros correspondientes al valor decimal de cada byte. 
 * Trabajar en la interacción usuario - simulación
 * Generación de patrones automáticos
-* Implementación de menú
+* Implementación de menu
 * Optimizar recursos usando memoria dinámica y tener en cuenta el uso de punteros,
 
 En esta lista se descibre brevemente el paso a paso inicial que hemos planteado para comenzar con la 
 implementación.
 
 ## Resumen de planteamiento para la solución
+
+Primero que todo convertiremos las filas de las matrices a bytes que serán usados luego en una función creada para encender los leds en base al valor décimal de los bytes.
+
+![solucion](https://i.imgur.com/yeXCpAJ.jpg)
+
+Como fue mencionado anteriormente se usará una matriz para predefinir las secuencias, esto se puede hacer manual o mediante ciclos en el caso de las secuencias.
+
+Se implementarán funciones como:
+
+```python
+...
+
+verificacion();
+imagen();
+publik();
+traduccionByte();
+
+
+*/
+verificacion() pedirá al usuario el tiempo que pasará entre encendido y apagado y la cantidad de repeticiones, para luego reflejar esto en los leds.
+/*
+
+
+/*
+imagen() pedirá al usuario la posición de una fila y una columna para invertir el valor que esta posición tiene asignanado, de esta manera si contamos con una matriz 4x4 con todos sus leds apagados y el usuario ingresa [1][1]. 
+*/
+
+...
+// La matriz resultante será esta
+(1,0,0,0) 
+(0,0,0,0)
+(0,0,0,0)
+(0,0,0,0)
+...
+
+/*
+En el caso que el usuario ingrese un número fuera de rango se validará o automáticamente se cancelará la ejecución imprimiendo la matriz que se había personalizado hasta ese momento.
+*/
+
+/*
+publik() menu para interacción usuario-simulación.
+
+*/
+
+//Esto para hacerlo más similar a las matrices fuera de la programación.
+
+/*
+traduccionByte() pedirá una fila de la matriz y una variable a la cuál le asignará su correspondiente valor décimal.
+
+Si tenemos en cuenta la matriz anterior el resultado sería:
+
+En byte: B1000
+En decimal: 128
+
+*/
+
+//El resto de funciones necesarias aún está por definir.
+
+```
+
+Nota: Como la matriz no se necesita durante todo el tiempo de ejecución y la memoria del Arduino es muy pequeña probablemente se usará un arreglo dinámico.
