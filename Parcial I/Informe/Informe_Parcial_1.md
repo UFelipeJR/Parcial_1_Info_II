@@ -157,7 +157,8 @@ imagen() pedirá al usuario la posición de una fila y una columna para invertir
 ...
 
 /*
-En el caso que el usuario ingrese un número fuera de rango se validará o automáticamente se cancelará la ejecución imprimiendo la matriz que se había personalizado hasta ese momento.
+En el caso que el usuario ingrese un número fuera de rango se validará o automáticamente se cancelará la ejecución imprimiendo
+la matriz que se había personalizado hasta ese momento.
 */
 
 /*
@@ -172,7 +173,7 @@ traduccionByte() pedirá una fila de la matriz y una variable a la cuál le asig
 
 Si tenemos en cuenta la matriz anterior el resultado sería:
 
-En byte: B1000
+En byte: B10000000
 En decimal: 128
 
 */
