@@ -186,3 +186,14 @@ En decimal: 128
 
 Nota: Como la matriz no se necesita durante todo el tiempo de ejecución y la memoria del Arduino es muy pequeña
 probablemente se usará un arreglo dinámico.
+
+
+
+## Proceso Solución del Problema
+
+## Implementación del circuito en tinkercad
+
+Se utilizan 8 integrados 74hc595 con 3 pines digitales, cumpliendo de esta manera el requisito de usar máximo 7 pines del arduino.
+
+![solucion](https://i.imgur.com/oSDhvOO.png)
+
