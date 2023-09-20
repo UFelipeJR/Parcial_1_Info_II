@@ -197,3 +197,26 @@ Se utilizan 8 integrados 74hc595 con 3 pines digitales, cumpliendo de esta maner
 
 ![solucion](https://i.imgur.com/oSDhvOO.png)
 
+
+Se define función de prueba para comprobar el estado de las conexiones:
+
+```python
+
+void ledWrite(int F1,int F2,int F3,int F4, int F5, int F6, int F7, int F8){
+   //Se toman 8 argumentos que representan el valor entero de los bytes equivalentes a cada fila
+   //Se usa shiftOut() para enviar datos en serie
+   //Se activa en modo LSBFIST es decir bit menos significativo primero
+
+   shiftOut(pinData, pinClock, LSBFIRST, F8); 
+   shiftOut(pinData, pinClock, LSBFIRST, F7); 
+   shiftOut(pinData, pinClock, LSBFIRST, F6); 
+   shiftOut(pinData, pinClock, LSBFIRST, F5);
+   shiftOut(pinData, pinClock, LSBFIRST, F4);
+   shiftOut(pinData, pinClock, LSBFIRST, F3);
+   shiftOut(pinData, pinClock, LSBFIRST, F2);
+   shiftOut(pinData, pinClock, LSBFIRST, F1);
+   digitalWrite(pinLatch, HIGH);
+   digitalWrite(pinLatch, LOW);
+}
+
+```
