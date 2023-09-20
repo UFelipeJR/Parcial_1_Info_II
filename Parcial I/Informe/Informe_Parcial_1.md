@@ -95,7 +95,7 @@ A modo de nuestro workflow trabajamos con un arreglo dinamico el cual fuera modi
 
 del mismo modo se vería graficamente como...
 
-```python
+```c++
 ...
 (0,0,0,1) //4x4 de leds.
 (0,0,1,0)
@@ -130,7 +130,7 @@ Como fue mencionado anteriormente se usará una matriz para predefinir las secue
 
 Se implementarán funciones como:
 
-```python
+```c++
 ...
 
 verificacion();
@@ -191,19 +191,22 @@ probablemente se usará un arreglo dinámico.
 
 ## Proceso Solución del Problema
 
-## Implementación del circuito en tinkercad
+## Implementación del circuito 
 
 Se utilizan 8 integrados 74hc595 con 3 pines digitales, cumpliendo de esta manera el requisito de usar máximo 7 pines del arduino.
 
 ![solucion](https://i.imgur.com/oSDhvOO.png)
 
 
+
+## Implementación de funciones
+
 Se define función de prueba para comprobar el estado de las conexiones:
 
-```python
+```c++
 
 void ledWrite(int F1,int F2,int F3,int F4, int F5, int F6, int F7, int F8){
-   //Se toman 8 argumentos que representan el valor entero de los bytes equivalentes a cada fila
+   //Se toman definen 8 parametros que representan el valor entero de los bytes equivalentes a cada fila
    //Se usa shiftOut() para enviar datos en serie
    //Se activa en modo LSBFIST es decir bit menos significativo primero
 
@@ -219,4 +222,22 @@ void ledWrite(int F1,int F2,int F3,int F4, int F5, int F6, int F7, int F8){
    digitalWrite(pinLatch, LOW);
 }
 
+```
+
+Se definió una función que permite encender y apagar los leds n veces durante cierto tiempo.
+
+```c++
+void verificacion(int tiempoSeg,int nSecuencias){
+   //Se definen 2 parametros enteros que representan el tiempo en segundos entre cada repetición y la cantidad de secuencias.
+
+   for(int i = 0; i < nSecuencias; i++){
+      ledWrite(255, 255, 255, 255, 255, 255,255,255); //255 representa una fila de bits completamente encendida
+      delay(tiempoSeg*1000);
+      ledWrite(0,0,0,0,0,0,0,0); // 0 representa una fila de bits completamente encendida 
+      Serial.print("Repeticion numero: ");
+      Serial.println(i + 1 );
+      delay(tiempoSeg*1000);
+  }
+  Serial.println("Verificacion Finalizada");
+}
 ```
