@@ -241,3 +241,44 @@ void verificacion(int tiempoSeg,int nSecuencias){
   Serial.println("Verificacion Finalizada");
 }
 ```
+
+No fueron colocadas las utilidades que se usan para el funcionamiento de la función pero se implemento una opción de prueba para personalizar el patrón que se mostrará en pantalla.
+
+```c++
+void personalizar(int** matriz){
+    int fila = 0;
+    int columna = 0;
+    Serial.println("Personalice la imagen de la matriz:" );
+    mostrar(matriz,8,8);
+    while(true){
+        Serial.println("Nota: todo valor que no corresponda a los indices de una matriz 8x8 sera ignorado:");
+        input(fila,"Ingrese el numero de la fila que desea cambiar o 65 para salir:"); 
+        input(columna,"Ingrese la numero de la columna que desea cambiar o 65 para salir:");
+
+        if(fila  == 65 || columna == 65 ){
+            break;
+        }
+
+        if (matriz[fila-1][columna-1] == 1) {
+            matriz[fila-1][columna-1] = 0;
+        }
+        else {
+            matriz[fila-1][columna-1] = 1;
+        }
+
+        mostrar(matriz,8,8);
+
+    }
+
+    translateByte(matriz,0,ByteF1);
+    translateByte(matriz,1,ByteF2);
+    translateByte(matriz,2,ByteF3);
+    translateByte(matriz,3,ByteF4);
+    translateByte(matriz,4,ByteF5);
+    translateByte(matriz,5,ByteF6);
+    translateByte(matriz,6,ByteF7);
+    translateByte(matriz,7,ByteF8);
+    fillMatriz(matriz,8,8);
+    
+}
+```
