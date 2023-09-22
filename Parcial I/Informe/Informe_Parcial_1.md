@@ -369,3 +369,5 @@ void genPatron4(int** matriz) {
 }
 ```
 Varias de estas funciones predominaron muchas constantes ya que trabajamos bajo el mismo arreglo sin cambios, nuevamente revisaremos en estas mismas para cambiar las constantes por valores que tengan congruencia con lo que se busca imprimir.
+
+Nota: Se colocó el enlace del proyecto tinkercad en el que se notan varios de los requisitos funcionales ya implementados, sin embargo aún resta pulir algunos aspectos del código; por otra parte el proceso de implementación tardó tan solo unas horas debido a que ya teníamos una planeación de por medio.
