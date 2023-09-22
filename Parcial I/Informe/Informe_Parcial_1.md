@@ -282,3 +282,90 @@ void personalizar(int** matriz){
     
 }
 ```
+
+Para la implementación de nuestros patrones cerrados por la matriz definida
+
+```c++
+
+//Patrón 1
+
+void genPatron1(int** matriz){
+    fillMatriz(matriz, 8, 8);
+
+    for (int i = 0; i < 8; i++) {
+        for (int j = i; j < 8 - i; j++) {
+            matriz[3-i][j] = 1; //3-i
+            matriz[i+4][j] = 1; //i+4
+        }
+    }
+}
+
+//Patrón 2
+
+void genPatron2(int matriz){
+    fillMatriz(matriz,8,8);
+
+    for(int i = 0 ; i<8;i++){
+        for(int j = 0; j<8;j++)
+            if(i == j || i+j == 7){
+                matriz[i][j] = 1;
+            }
+        }
+}
+
+//Patrón 3
+
+void genPatron3(int matriz){
+    fillMatriz(matriz,8,8);
+
+
+    for(int i = 0 ; i<8;i++){
+        if(i == 0 i == 1  i == 4 || i == 5){
+            for(int j = 0; j<8;j++){
+                if(j != 2 && j != 5){
+                    matriz[i][j] = 1;
+                }
+            }
+        }
+        else{
+            for(int j = 0; j<8;j++){
+                if(j != 0 && j!= 3 && j!=6){
+                    matriz[i][j] = 1;
+                }
+            }
+        }
+    }
+
+}
+
+//Patrón 4
+
+void genPatron4(int** matriz) {
+    int init = 0;
+    int aux = 0;
+    int filas = 8;
+    int columnas = 8;
+    fillMatriz(matriz, 8, 8);
+
+    for(int i = 0; i < filas/2; i++) {
+        init = i % 8;
+        for (int j = 0; j < columnas; j++) {
+            if (j >= init && j < init + filas/2) {
+                matriz[i][j] = 1;
+            }
+        }
+    }
+
+    aux = 3;
+    for(int i = 4; i < filas; i++){
+        init = aux%8;
+        for(int j = 0; j<columnas;j++){
+            if (j >= init && j < init + filas/2) {
+                matriz[i][j] = 1;
+            }
+        }
+        aux --;
+    }
+}
+```
+Varias de estas funciones predominaron muchas constantes ya que trabajamos bajo el mismo arreglo sin cambios, nuevamente revisaremos en estas mismas para cambiar las constantes por valores que tengan congruencia con lo que se busca imprimir.
