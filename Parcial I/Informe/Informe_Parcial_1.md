@@ -372,6 +372,7 @@ Varias de estas funciones predominaron muchas constantes ya que trabajamos bajo 
 
 Nota: Se colocó el enlace del proyecto tinkercad en el README y en el archivo del infome, se notan varios de los requisitos funcionales ya implementados, sin embargo aún resta pulir algunos aspectos del código; por otra parte el proceso de implementación tardó tan solo unas horas debido a que ya teníamos una planeación de por medio.
 
+## Nota final
 
 El 22/09/2023 se ha dado por concluida implementación de la solución del problema, como se mencionó anteriormente no se necesitó mucho tiempo para codificar ya que había un análisis de por medio y teniamos todo planificado. 
 
