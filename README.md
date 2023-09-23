@@ -5,6 +5,6 @@
 * Felipe Jiménez Ramírez
 * Santiago Pareja Pareja
 
-[- Proyecto Tinkercad -](https://www.tinkercad.com/things/8rY4dTVhr0Q?sharecode=GsS3glwJ_Hnsqcyt_E2rV1LQWFPN1kUoiAVzaa1udYw)
+[Proyecto Tinkercad Parcial 1](https://www.tinkercad.com/things/8rY4dTVhr0Q?sharecode=GsS3glwJ_Hnsqcyt_E2rV1LQWFPN1kUoiAVzaa1udYw)
 
 
