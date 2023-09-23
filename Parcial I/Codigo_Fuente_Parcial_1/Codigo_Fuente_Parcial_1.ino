@@ -53,7 +53,7 @@ void loop() {
 int pow2(int exponente){
   
   // Función que calcula la potencia de 2 dada por exponente.
- 
+
   int resultado = 1 << exponente;
   
   return resultado;
@@ -131,13 +131,7 @@ void fillMatriz(int** matriz, int filas, int columnas){
     
     for (int i = 0; i < filas; i++) {
         for (int j = 0; j < columnas; j++) {
-            matriz[i][j] = 1;
-            if((i + j)%2 == 0){
-                matriz[i][j] = 0;
-            }
-            else{
-                matriz[i][j] = 0;
-            }
+            matriz[i][j] = 0;
         }
     }
 }
