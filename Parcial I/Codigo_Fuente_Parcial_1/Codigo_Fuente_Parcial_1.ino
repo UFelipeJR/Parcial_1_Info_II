@@ -140,8 +140,8 @@ void mostrar(int** matriz,int filas, int columnas){
 
     // Función que imprime la matriz en pantalla.
     
-    for(int i = 0; i<8;i++){
-        for(int j = 0; j <8; j++){
+    for(int i = 0; i<filas;i++){
+        for(int j = 0; j <columnas; j++){
             Serial.print(matriz[i][j]);
             Serial.print(" ");
         }
@@ -223,7 +223,7 @@ void genPatron1(int** matriz, int& b1, int& b2, int& b3, int& b4, int& b5, int& 
     int filas = 8;
     int columnas = 8;
     
-    for (int i = 0; i < filas; i++) {
+    for (int i = 0; i < filas; i++){
         for (int j = i; j < columnas - i; j++) {
             matriz[3-i][j] = 1;
             matriz[i+4][j] = 1;
@@ -286,7 +286,6 @@ void genPatron4(int** matriz, int& b1, int& b2, int& b3, int& b4, int& b5, int& 
     int aux = 0;
     int filas = 8;
     int columnas = 8;
-    fillMatriz(matriz, 8, 8);
 
     for(int i = 0; i < filas/2; i++) {
         init = i % 8;
@@ -297,8 +296,8 @@ void genPatron4(int** matriz, int& b1, int& b2, int& b3, int& b4, int& b5, int& 
         }
     }
 
-    aux = 3;
-    for(int i = 4; i < filas; i++){
+    aux = filas-(filas/2)-1;
+    for(int i = filas/2; i < filas; i++){
         init = aux%8;
         for(int j = 0; j<columnas;j++){
             if (j >= init && j < init + filas/2) {
@@ -338,7 +337,6 @@ void personalizar(int** matriz){
     int ByteF6 = 0;
     int ByteF7 = 0;
     int ByteF8 = 0;
-    int opcion = 0;
     int fc[2];
     
     Serial.println("Personalice la imagen de la matriz:" );
@@ -347,12 +345,12 @@ void personalizar(int** matriz){
        Serial.println("Nota: todo valor que no corresponda a los indices de una matriz 8x8 provocara errores en la matriz de leds.");
        inputOneLine(fc);
 
-        if(fc[0]  == 9 || fc[1] == 99 ){
+        if(fc[0]  == 9 && fc[1] == 9 ){
             break;
         }
         
 
-        if((fc[1] >= 0 && fc[1] <=64) && (fc[0] >= 0 && fc[0] <=64)){
+        if((fc[1] >= 1 && fc[1] <=8) && (fc[0] >= 1 && fc[0] <=8)){
           if (matriz[fc[0]-1][fc[1]-1] == 1) {
               matriz[fc[0]-1][fc[1]-1] = 0;
           }
@@ -414,14 +412,6 @@ void publik(){
   
   int nSecuencias = 0;
   int tiempoSeg = 0;
-  int ByteF1 = 0;
-  int ByteF2 = 0;
-  int ByteF3 = 0;
-  int ByteF4 = 0;
-  int ByteF5 = 0;
-  int ByteF6 = 0;
-  int ByteF7 = 0;
-  int ByteF8 = 0;
   int opcion = 0;
   int** matriz = genMatriz(8,8);
   
