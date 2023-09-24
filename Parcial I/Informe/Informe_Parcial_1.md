@@ -376,6 +376,8 @@ Nota: Se colocó el enlace del proyecto tinkercad en el README y en el archivo d
 
 El 22/09/2023 se ha dado por concluida implementación de la solución del problema, como se mencionó anteriormente no se necesitó mucho tiempo para codificar ya que había un análisis de por medio y teniamos todo planificado. 
 
+NOTA: El proyecto del parcial aparece como una mezcla de un proyecto original pero es porque teniamos dos versiones, una para pruebas y otra de implementación oficial.
+
 ## Enlaces Importantes
 
 Enlace Directo: 
