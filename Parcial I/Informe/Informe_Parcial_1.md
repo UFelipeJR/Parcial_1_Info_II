@@ -383,3 +383,6 @@ https://www.tinkercad.com/things/8rY4dTVhr0Q?sharecode=GsS3glwJ_Hnsqcyt_E2rV1LQW
 
 Hipervinculo:
 [(Proyecto Tinkercad)](https://www.tinkercad.com/things/8rY4dTVhr0Q?sharecode=GsS3glwJ_Hnsqcyt_E2rV1LQWFPN1kUoiAVzaa1udYw)
+
+Vídeo Youtube
+[(Vídeo)](https://youtu.be/mOIkzRQvF-0)

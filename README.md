@@ -7,6 +7,8 @@
 
 ## Enlaces
 
-[Proyecto Tinkercad Parcial 1](https://www.tinkercad.com/things/8rY4dTVhr0Q?sharecode=GsS3glwJ_Hnsqcyt_E2rV1LQWFPN1kUoiAVzaa1udYw)
+[Proyecto Tinkercad Parcial #1](https://www.tinkercad.com/things/8rY4dTVhr0Q?sharecode=GsS3glwJ_Hnsqcyt_E2rV1LQWFPN1kUoiAVzaa1udYw)
+
+[Vídeo Parcial #1](https://youtu.be/mOIkzRQvF-0)
 
 
