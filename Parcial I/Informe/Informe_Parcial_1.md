@@ -372,6 +372,14 @@ Varias de estas funciones predominaron muchas constantes ya que trabajamos bajo 
 
 Nota: Se colocó el enlace del proyecto tinkercad en el README y en el archivo del infome, se notan varios de los requisitos funcionales ya implementados, sin embargo aún resta pulir algunos aspectos del código; por otra parte el proceso de implementación tardó tan solo unas horas debido a que ya teníamos una planeación de por medio.
 
+## Notas importantes acerca de la solución del problema
+Con respecto a algunos incovenientes acerca de la implementación, el principal problema fue a la hora de recibir inputs por el monitor serial, ya que es bien sabido que programa principal en arduino se coloca en el void loop(), que es una función que se ejecuta infinitamente hasta que se retire el suministro eléctrico, la solución fue profundizada en el vídeo sin embargo se resume en la implementación de una función que evite este problema.
+
+En relación al uso del modo MSB o LSB se optó por LSB ya que este iba desde el menos significativo hasta el más signficativo, si se hacía de la otra manera la figura se mostraba al revés.
+
+Por otra parte se barajó solicitar al usuario bit elemento por elemento o fila por fila, pero al final se decidió generar una matriz para facilitar el uso.
+
+
 ## Nota final
 
 El 22/09/2023 se ha dado por concluida implementación de la solución del problema, como se mencionó anteriormente no se necesitó mucho tiempo para codificar ya que había un análisis de por medio y teniamos todo planificado. 
